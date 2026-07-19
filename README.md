@@ -17,7 +17,8 @@ Azure Data Factory, Azure Data Lake Storage Gen2, Databricks (PySpark, Delta Lak
 <li>Secrets (SQL password, storage keys) secured via Azure Key Vault, accessed through Databricks Secret Scopes — never hardcoded.</li>
 <li>Unity Catalog governs storage access via Volumes and External Locations.</li>
 </ul>
-
+<img width="1827" height="784" alt="image" src="https://github.com/user-attachments/assets/bd7e531f-a956-4390-b074-83a6601dd2bb" />
+Run of job
 ### Known limitations
 <ul>
 <li>Storage Event Trigger in ADF set up but unreliable — Event Grid doesn't reliably fire on dbutils.fs.mv (rename-style) operations in ADLS Gen2 HNS accounts. Manual trigger used for demo; production fix would test against true blob-create events (e.g. direct upload, not internal move).</li>
